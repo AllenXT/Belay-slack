@@ -1,0 +1,187 @@
+:root {
+    --bs-body-bg: #e0eef4;
+}
+
+.App {
+    height: 100vh;
+}
+
+.card {
+    border: none;
+}
+
+.form-control {
+    border: 2px solid black;
+}
+
+.form-check-input {
+    border: 2px solid black;
+    -webkit-appearance: none;
+    appearance: none;
+    min-height: 1rem;
+    min-width: 1rem;
+    margin-top: 0.3em;
+    vertical-align: top;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 0.25em;
+}
+
+.form-check-input:checked {
+    background-color: blue;
+    border-color: blue;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #f8f9fa;
+}
+  
+.dashboard-container {
+    display: flex;
+    flex: 1;
+}
+
+.channel-list {
+    flex: 0 0 auto;
+    padding-left: 10px;
+}
+
+.messages-board {
+    flex-grow: 1;
+    overflow-y: auto; 
+}
+
+.reply-section {
+    flex: 0 0 500px;
+}
+
+.profile-section {
+    flex: 0 0 350px;
+}  
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1050;
+    background-color: rgba(0, 0, 0, 0.5); /* Dimmed backdrop */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); 
+    width: 90%; 
+    max-width: 500px;
+}
+
+.modal-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.modal-footer {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0;
+}
+
+.modal-backdrop .btn:hover {
+    background-color: #f0f0f0; 
+    font-weight: bolder;
+}
+
+.no-border .list-group-item {
+    border: none;
+    border-radius: 0;
+}
+
+.no-border .list-group-item span{
+    margin-left:5px;
+}
+
+.channels-header {
+    display: flex;
+    align-items: center;
+    color: var(--slack-main-white);
+    margin-top: 0.7rem;
+    margin-left: 0.7rem;
+}
+
+.channels-header i {
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+}
+
+.badge {
+    padding-left: .3em; 
+    padding-right: .3em; 
+}
+
+.badge-primary {
+    background-color: red;
+}
+
+.reply-btn:hover {
+    background-color: #e0eef4; 
+    color: black; 
+}
+
+.reply-badge {
+    background-color: #f44336; 
+}
+
+.emoji-reactions .dropdown-menu {
+    max-height: 150px; 
+    overflow-y: auto; 
+    overflow-x: hidden; 
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+  
+.dropdown>.dropdown-toggle:active {
+    /* Without this, clicking will make it sticky */
+    pointer-events: none;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+.current-channel {
+    background-color: #94c7f9;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+/* In default, all parts are visible */
+.dashboard-container > * {
+    display: block;
+}
+
+/* less than some width, show active part */
+@media (max-width: 768px) {
+    .dashboard-container > *:not(.active) {
+        display: none;
+    }
+}
+
+
